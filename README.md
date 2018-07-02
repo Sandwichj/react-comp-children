@@ -31,7 +31,7 @@ equals to
 ...
 ```
 
-#### for array items
+#### for array items - inline
 ```JSX
 import Children from 'react-comp-children';
 ...
@@ -40,6 +40,31 @@ render() {
     return (
         <div>
             <Children items={ items } active={ [0, 2] } />
+        </div>
+    );
+}
+...
+```
+equals to
+```JSX
+...
+    <div>
+        <A /><C />
+    </div>
+...
+```
+#### for array items - block
+```JSX
+import Children from 'react-comp-children';
+...
+render() {
+    return (
+        <div>
+            <Children active={ [0, 2] }>
+                <A />
+                <B />
+                <C />
+            </Children>
         </div>
     );
 }

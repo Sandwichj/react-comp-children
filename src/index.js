@@ -1,7 +1,11 @@
 import PropTypes from 'prop-types';
 
-const Children = ({ items = [], active = 0 }) => {
+const Children = ({ items, active = 0, ...props }) => {
   const activeItems = [];
+
+  if (!items) {
+    items = props.children;
+  }
 
   if (!Array.isArray(active)) {
     return items[active];
@@ -33,7 +37,7 @@ const activePropTypes = PropTypes.oneOfType([
 ]);
 
 Children.propTypes = {
-  items: itemsPropTypes.isRequired,
+  items: itemsPropTypes,
   active: activePropTypes.isRequired,
 };
 
