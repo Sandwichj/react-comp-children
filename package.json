@@ -1,0 +1,31 @@
+{
+  "name": "react-comp-children",
+  "version": "0.1.1",
+  "description": "A react component that makes easy to select items to be mounted dynamically.",
+  "main": "lib/index.js",
+  "scripts": {
+    "prepublish": "babel src --out-dir lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sandwichj/react-comp-children.git"
+  },
+  "keywords": [
+    "react",
+    "comp",
+    "component",
+    "child",
+    "children",
+    "select",
+    "mount"
+  ],
+  "author": "msjeong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sandwichj/react-comp-children/issues"
+  },
+  "homepage": "https://github.com/Sandwichj/react-comp-children#readme",
+  "dependencies": {
+    "prop-types": "^15.6.2"
+  }
+}
