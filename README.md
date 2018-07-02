@@ -60,10 +60,6 @@ render() {
 #### Dependencies
 * [prop-types](https://www.npmjs.com/package/prop-types)
 
-```sh
-$ npm install --production
-$ NODE_ENV=production node app
-```
 
 License
 ----
