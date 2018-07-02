@@ -22,6 +22,14 @@ render() {
 }
 ...
 ```
+equals to
+```JSX
+...
+    <div>
+        <B />
+    </div>
+...
+```
 
 - for array items
 ```JSX
@@ -35,6 +43,14 @@ render() {
         </div>
     );
 }
+...
+```
+equals to
+```JSX
+...
+    <div>
+        <A /><C />
+    </div>
 ...
 ```
 
@@ -56,10 +72,22 @@ render() {
 }
 ...
 ```
+equals to
+```JSX
+...
+    <div>
+        <A /><B />
+    </div>
+...
+```
 
 #### Dependencies
 * [prop-types](https://www.npmjs.com/package/prop-types)
 
+```sh
+$ npm install --production
+$ NODE_ENV=production node app
+```
 
 License
 ----
