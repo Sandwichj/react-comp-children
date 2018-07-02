@@ -1,6 +1,6 @@
 {
   "name": "react-comp-children",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A react component that makes easy to select items to be mounted dynamically.",
   "main": "lib/index.js",
   "scripts": {
