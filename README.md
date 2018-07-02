@@ -54,7 +54,7 @@ equals to
 ...
 ```
 
-- for object items
+#### for object items
 ```JSX
 import Children from 'react-comp-children';
 ...
@@ -81,7 +81,7 @@ equals to
 ...
 ```
 
-#### Dependencies
+### Dependencies
 * [prop-types](https://www.npmjs.com/package/prop-types)
 
 License
