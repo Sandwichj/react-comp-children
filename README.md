@@ -2,13 +2,13 @@
 
 A react component that makes easy to select items to be mounted dynamically.
 
-#### Installation
+### Installation
 ```sh
 npm install --save react-comp-children
 ```
 
-#### Examples
-- Activate one of children
+### Examples
+#### Activate one of children
 ```JSX
 import Children from 'react-comp-children';
 ...
@@ -31,7 +31,7 @@ equals to
 ...
 ```
 
-- for array items
+#### for array items
 ```JSX
 import Children from 'react-comp-children';
 ...
@@ -83,11 +83,6 @@ equals to
 
 #### Dependencies
 * [prop-types](https://www.npmjs.com/package/prop-types)
-
-```sh
-$ npm install --production
-$ NODE_ENV=production node app
-```
 
 License
 ----
