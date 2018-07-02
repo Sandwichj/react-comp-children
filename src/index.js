@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Children = ({ items=[], active=0 }) => {
+const Children = ({ items = [], active = 0 }) => {
   const activeItems = [];
 
   if (!Array.isArray(active)) {
@@ -19,8 +19,8 @@ const Children = ({ items=[], active=0 }) => {
 };
 
 const itemsPropTypes = PropTypes.oneOfType([
-  PropTypes.arrayOf(PropTypes.node),
-  PropTypes.objectOf(PropTypes.node),
+  PropTypes.array,
+  PropTypes.object,
 ]);
 
 const activePropTypes = PropTypes.oneOfType([
