@@ -2,3 +2,5 @@
 /projects
 .git*
 /src
+.babelrc
+/package-lock.json

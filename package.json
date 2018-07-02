@@ -27,5 +27,11 @@
   "homepage": "https://github.com/Sandwichj/react-comp-children#readme",
   "dependencies": {
     "prop-types": "^15.6.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1"
   }
 }
