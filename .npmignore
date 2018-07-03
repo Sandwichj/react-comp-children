@@ -1,6 +1,7 @@
 /node_modules
 /projects
-.git*
 /src
-.babelrc
 /package-lock.json
+.babelrc
+.eslint*
+.git*

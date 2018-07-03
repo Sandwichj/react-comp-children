@@ -1,10 +1,18 @@
 import PropTypes from 'prop-types';
 
-const Children = ({ items, active = 0, ...props }) => {
+const Children = ({ items, children, active, ...props }) => {
   const activeItems = [];
 
   if (!items) {
-    items = props.children;
+    items = children;
+  }
+
+  if (!items) {
+    throw new Error('It must have children at least one.');
+  }
+
+  if ((typeof active === 'undefined') || active === null) {
+    return Array.isArray(items) ? items : items.values();
   }
 
   if (!Array.isArray(active)) {
@@ -38,7 +46,7 @@ const activePropTypes = PropTypes.oneOfType([
 
 Children.propTypes = {
   items: itemsPropTypes,
-  active: activePropTypes.isRequired,
+  active: activePropTypes,
 };
 
 export default Children;

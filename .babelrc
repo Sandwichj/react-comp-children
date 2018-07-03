@@ -1,4 +1,13 @@
 {
-  "presets": ["env"],
-  "plugins": ["transform-object-rest-spread"]
+  "presets": ["env", "react"],
+  "plugins": [
+    "transform-object-rest-spread",
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "__test__": "./src/__test__",
+        "__sample__": "./src/__test__/__sample__"
+      }
+    }]
+  ]
 }

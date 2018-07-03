@@ -1,0 +1,4 @@
+/node_modules/**
+/projects/**
+/src/__test__/__coverage__/**
+/lib/**

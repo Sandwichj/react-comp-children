@@ -1,10 +1,13 @@
 {
   "name": "react-comp-children",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "A react component that makes easy to select items to be mounted dynamically.",
   "main": "lib/index.js",
   "scripts": {
-    "prepare": "babel src --out-dir lib"
+    "prepare": "babel src --out-dir lib",
+    "test": "jest --coverage --changedSince=master",
+    "test:all": "jest",
+    "eslint": "eslint ./src --ext .js --ext .jsx --cache || true"
   },
   "repository": {
     "type": "git",
@@ -26,12 +29,57 @@
   },
   "homepage": "https://github.com/Sandwichj/react-comp-children#readme",
   "dependencies": {
-    "prop-types": "^15.6.2"
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.5",
+    "babel-jest": "^23.2.0",
+    "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.7.0"
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "eslint": "^5.0.1",
+    "eslint-config-google": "^0.9.1",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.10.0",
+    "jest": "^23.2.0"
+  },
+  "jest": {
+    "verbose": true,
+    "automock": false,
+    "setupFiles": [
+      "./setupJest.js"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "moduleDirectories": [
+      "./node_modules",
+      "./src"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!**/lib/**",
+      "!**/__test__/**",
+      "!**/node_modules/**",
+      "!**/projects/**"
+    ],
+    "coverageDirectory": "./src/__test__/__coverage__",
+    "coverageThreshold": {
+      "src/**/*.{js,jsx}": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
   }
 }
