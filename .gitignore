@@ -3,4 +3,4 @@
 /package-lock.json
 /src/__test__/__coverage__
 .eslintcache
-/lib
+/build
