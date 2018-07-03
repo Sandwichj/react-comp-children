@@ -5,13 +5,13 @@ export const B = () => <div>b</div>;
 export const C = () => <div>c</div>;
 
 export const compsInArray = [
-  <A />,
-  <B />,
-  <C />,
+  <A key="a" />,
+  <B key="b" />,
+  <C key="c" />,
 ];
 
 export const compsInObject = {
-  a: <A />,
-  b: <B />,
-  c: <C />,
+  a: <A key="a" />,
+  b: <B key="b" />,
+  c: <C key="c" />,
 };

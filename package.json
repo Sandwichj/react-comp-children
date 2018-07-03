@@ -1,33 +1,14 @@
 {
   "name": "react-comp-children",
   "version": "0.3.0",
-  "description": "A react component that makes easy to select items to be mounted dynamically.",
-  "main": "lib/index.js",
+  "description": "A react component that makes easy to mount children dynamically.",
+  "main": "build/index.js",
   "scripts": {
-    "prepare": "babel src --out-dir lib",
+    "prepare": "babel src --out-dir build --ignore './src/__test__'",
     "test": "jest --coverage --changedSince=master",
     "test:all": "jest",
     "eslint": "eslint ./src --ext .js --ext .jsx --cache || true"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Sandwichj/react-comp-children.git"
-  },
-  "keywords": [
-    "react",
-    "comp",
-    "component",
-    "child",
-    "children",
-    "select",
-    "mount"
-  ],
-  "author": "msjeong",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Sandwichj/react-comp-children/issues"
-  },
-  "homepage": "https://github.com/Sandwichj/react-comp-children#readme",
   "dependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
@@ -43,6 +24,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^5.0.1",
     "eslint-config-google": "^0.9.1",
     "eslint-friendly-formatter": "^4.0.1",
@@ -81,5 +63,24 @@
         "statements": 100
       }
     }
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sandwichj/react-comp-children.git"
+  },
+  "keywords": [
+    "react",
+    "comp",
+    "component",
+    "child",
+    "children",
+    "select",
+    "mount"
+  ],
+  "author": "msjeong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sandwichj/react-comp-children/issues"
+  },
+  "homepage": "https://github.com/Sandwichj/react-comp-children#readme"
 }
