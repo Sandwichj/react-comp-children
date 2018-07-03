@@ -1,6 +1,6 @@
 # react-comp-children
 
-A react component that makes easy to select items to be mounted dynamically.
+A react component that makes easy to mount children dynamically.
 
 ### Installation
 ```sh
