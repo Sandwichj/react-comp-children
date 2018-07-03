@@ -1,6 +1,6 @@
 {
   "name": "react-comp-children",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "A react component that makes easy to select items to be mounted dynamically.",
   "main": "lib/index.js",
   "scripts": {
@@ -29,9 +29,9 @@
     "prop-types": "^15.6.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1"
+    "babel-preset-env": "^1.7.0"
   }
 }
