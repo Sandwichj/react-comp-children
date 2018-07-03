@@ -1,6 +1,6 @@
 {
   "name": "react-comp-children",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A react component that makes easy to mount children dynamically.",
   "main": "build/index.js",
   "scripts": {
