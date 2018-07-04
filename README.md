@@ -106,9 +106,6 @@ equals to
 ...
 ```
 
-### Dependencies
-* [prop-types](https://www.npmjs.com/package/prop-types)
-
 License
 ----
 MIT
