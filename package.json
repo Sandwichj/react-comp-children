@@ -1,6 +1,6 @@
 {
   "name": "react-comp-children",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "A react component that makes easy to mount children dynamically.",
   "main": "index.js",
   "scripts": {
@@ -9,9 +9,6 @@
     "prepare": "(npm run prepare:prod) && (npm run prepare:dev)",
     "test": "jest",
     "eslint": "eslint ./src --ext .js --ext .jsx --cache || true"
-  },
-  "dependencies": {
-    "react": "^16.4.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -37,7 +34,11 @@
     "eslint-plugin-react": "^7.10.0",
     "jest": "^23.2.0",
     "prop-types": "^15.6.2",
+    "react": "^16.4.1",
     "react-dom": "^16.4.1"
+  },
+  "peerDependencies": {
+    "react": "^16.4.1"
   },
   "jest": {
     "verbose": true,
