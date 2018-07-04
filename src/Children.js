@@ -49,6 +49,7 @@ Children.propTypes = {
       PropTypes.string,
     ])),
   ]),
+  children: PropTypes.array,
 };
 
 export default Children;
