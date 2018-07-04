@@ -1,5 +1,8 @@
 {
-  "presets": ["env", "react"],
+  "presets": [
+    "env",
+    "react"
+  ],
   "plugins": [
     "transform-object-rest-spread",
     "transform-react-pure-components",
@@ -13,6 +16,12 @@
   ],
   "env": {
     "production": {
+      "presets": [
+        ["minify", {
+          "removeConsole": true,
+          "removeDebugger": true,
+        }]
+      ],
       "plugins": [
         ["transform-react-remove-prop-types", {
           "ignoreFilenames": ["node_modules"],
