@@ -5,3 +5,4 @@
 .babelrc
 .eslint*
 .git*
+/setupJest.js
