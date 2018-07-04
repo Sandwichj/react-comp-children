@@ -17,11 +17,11 @@
           "ignoreFilenames": ["node_modules"],
           "removeImport" : true
         }]
+      ],
+      "ignore": [
+        "**/__test__",
+        "**/*.test.js"
       ]
     }
-  },
-  "ignore": [
-    "**/__test__",
-    "**/*.test.js"
-  ]
+  }
 }

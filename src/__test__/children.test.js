@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import Children from 'index';
+import Children from 'Children';
 import {
   A, B, C,
   compsInArray,
