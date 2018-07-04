@@ -1,6 +1,6 @@
 {
   "name": "react-comp-children",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "A react component that makes easy to mount children dynamically.",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,6 @@
     "babel-jest": "^23.2.0",
     "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-plugin-transform-react-pure-components": "^3.1.2",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.13",
     "babel-preset-env": "^1.7.0",
