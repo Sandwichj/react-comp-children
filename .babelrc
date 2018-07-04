@@ -9,5 +9,19 @@
         "__sample__": "./src/__test__/__sample__"
       }
     }]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        ["transform-react-remove-prop-types", {
+          "ignoreFilenames": ["node_modules"],
+          "removeImport" : true
+        }]
+      ]
+    }
+  },
+  "ignore": [
+    "**/__test__",
+    "**/*.test.js"
   ]
 }
