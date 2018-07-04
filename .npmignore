@@ -2,7 +2,8 @@
 /projects
 /src
 /package-lock.json
+/setupJest.js
+.npmignore
 .babelrc
 .eslint*
 .git*
-/setupJest.js

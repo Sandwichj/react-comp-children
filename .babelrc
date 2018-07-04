@@ -2,6 +2,7 @@
   "presets": ["env", "react"],
   "plugins": [
     "transform-object-rest-spread",
+    "transform-react-jsx",
     ["module-resolver", {
       "root": ["./src"],
       "alias": {

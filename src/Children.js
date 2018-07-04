@@ -1,7 +1,7 @@
-import { Component } from 'react';
+import { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-class Children extends Component {
+class Children extends PureComponent {
   getActiveItems(items, active) {
     const activeItems = [];
 
@@ -29,10 +29,10 @@ class Children extends Component {
   }
 
   render() {
-    const items = this.props.items || this.props.children;
-    const active = this.props.active;
-
-    return this.getActiveItems(items, active);
+    return this.getActiveItems(
+      this.props.items || this.props.children,
+      this.props.active,
+    );
   }
 }
 
