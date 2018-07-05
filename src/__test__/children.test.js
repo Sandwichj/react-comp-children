@@ -5,6 +5,7 @@ import Children from 'Children';
 import {
   A, B, C,
   compsInArray,
+  compsInArrayWithoutKeys,
   compsInObject,
   compsInObjectWithMixedTypeProperties,
 } from '__sample__/component.sample';
@@ -12,6 +13,12 @@ import {
 describe('Children', () => {
   it('should be rendered correctly.', () => {
     const wrapper = mount(<Children items={ compsInArray } />);
+
+    expect(wrapper.exists()).toBeTruthy();
+  });
+
+  it('should be rendered correctly with auto-generated keys.', () => {
+    const wrapper = mount(<Children items={ compsInArrayWithoutKeys } autoKeyGen=true />);
 
     expect(wrapper.exists()).toBeTruthy();
   });
