@@ -6,6 +6,7 @@ import {
   A, B, C,
   compsInArray,
   compsInObject,
+  compsInObjectWithMixedTypeProperties,
 } from '__sample__/component.sample';
 
 describe('Children', () => {
@@ -54,7 +55,7 @@ describe('Children', () => {
     });
   });
 
-  it('should return the active items as the order of provided if the provided items are in array.', () => {
+  it('should return the active items as the order of the given items if they are in array.', () => {
     const wrapper = mount(<Children items={ compsInArray } active={ [2, 0] } />);
     const children = wrapper.children();
     const shouldHave = [A, C];
@@ -78,6 +79,16 @@ describe('Children', () => {
     const wrapper = mount(<Children items={ compsInObject } active={ ['a', 'c'] } />);
     const children = wrapper.children();
     const shouldHave = [A, C];
+
+    children.forEach((child, index) => {
+      expect(child.is(shouldHave[index])).toBeTruthy();
+    });
+  });
+
+  it('should return the active items in the given object if active has mixed type properties.', () => {
+    const wrapper = mount(<Children items={ compsInObjectWithMixedTypeProperties } active={ [10, 'c'] } />);
+    const children = wrapper.children();
+    const shouldHave = [B, C];
 
     children.forEach((child, index) => {
       expect(child.is(shouldHave[index])).toBeTruthy();

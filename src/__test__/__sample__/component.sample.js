@@ -15,3 +15,9 @@ export const compsInObject = {
   b: <B key="b" />,
   c: <C key="c" />,
 };
+
+export const compsInObjectWithMixedTypeProperties = {
+  a: <A key="a" />,
+  10: <B key="b" />,
+  c: <C key="c" />,
+};
