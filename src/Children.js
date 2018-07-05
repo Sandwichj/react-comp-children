@@ -33,19 +33,8 @@ class Children extends Component {
       return activeItems;
     };
 
-    const applyKeys = (items, prefix='child_') => {
-      for (index in items) {
-        items[index].key = prefix+index;
-      }
-    };
-
-    if (this.props.autoKeyGen) {
-      const items = this.props.items;
-      applyKeys(items);
-    }
-
     return getActiveItems(
-      items || this.props.children,
+      this.props.items || this.props.children,
       this.props.active,
     );
   }
@@ -55,10 +44,6 @@ class Children extends Component {
  * PropTypes will be removed on 'production' node environment
  * by [babel-plugin-transform-react-remove-prop-types]{@link https://www.npmjs.com/package/babel-plugin-transform-react-remove-prop-types}
  */
-Children.defaultProps = {
-  autoKeyGen: false,
-};
-
 Children.propTypes = {
   items: PropTypes.oneOfType([
     PropTypes.array,
@@ -73,7 +58,6 @@ Children.propTypes = {
     ])),
   ]),
   children: PropTypes.array,
-  autoKeyGen: PropTypes.bool,
 };
 
 export default Children;

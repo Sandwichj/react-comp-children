@@ -10,12 +10,6 @@ export const compsInArray = [
   <C key="c" />,
 ];
 
-export const compsInArrayWithoutKeys = [
-  <A key="a" />,
-  <B key="b" />,
-  <C key="c" />,
-];
-
 export const compsInObject = {
   a: <A key="a" />,
   b: <B key="b" />,

@@ -45,18 +45,7 @@ function Children(props) {
     return activeItems;
   };
 
-  var applyKeys = function applyKeys(items) {
-    var prefix = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'child_';
-
-    for (index in items) {
-      items[index].key = prefix + index;
-    }
-  };
-
-  var items = props.items;
-  applyKeys(items);
-
-  return getActiveItems(items || props.children, props.active);
+  return getActiveItems(props.items || props.children, props.active);
 }
 
 /**
@@ -68,8 +57,7 @@ function Children(props) {
 Children.propTypes = {
   items: _propTypes2.default.oneOfType([_propTypes2.default.array, _propTypes2.default.object]),
   active: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.string, _propTypes2.default.arrayOf(_propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.string]))]),
-  children: _propTypes2.default.array,
-  autoKeys: _propTypes2.default.bool
+  children: _propTypes2.default.array
 };
 
 exports.default = Children;
