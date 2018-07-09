@@ -88,5 +88,8 @@
   "bugs": {
     "url": "https://github.com/Sandwichj/react-comp-children/issues"
   },
-  "homepage": "https://github.com/Sandwichj/react-comp-children#readme"
+  "homepage": "https://github.com/Sandwichj/react-comp-children#readme",
+  "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1"
+  }
 }

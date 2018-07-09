@@ -9,7 +9,7 @@ npm install --save react-comp-children
 
 ### Examples
 #### Activate one of children
-```JSX
+```js
 import Children from 'react-comp-children';
 ...
 render() {
@@ -23,7 +23,7 @@ render() {
 ...
 ```
 equals to
-```JSX
+```js
 ...
     <div>
         <B />
@@ -32,7 +32,7 @@ equals to
 ```
 
 #### for array items - inline
-```JSX
+```js
 import Children from 'react-comp-children';
 ...
 render() {
@@ -46,7 +46,7 @@ render() {
 ...
 ```
 equals to
-```JSX
+```js
 ...
     <div>
         <A /><C />
@@ -54,7 +54,7 @@ equals to
 ...
 ```
 #### for array items - block
-```JSX
+```js
 import Children from 'react-comp-children';
 ...
 render() {
@@ -71,7 +71,7 @@ render() {
 ...
 ```
 equals to
-```JSX
+```js
 ...
     <div>
         <A /><C />
@@ -80,7 +80,7 @@ equals to
 ```
 
 #### for object items
-```JSX
+```js
 import Children from 'react-comp-children';
 ...
 render() {
@@ -98,7 +98,7 @@ render() {
 ...
 ```
 equals to
-```JSX
+```js
 ...
     <div>
         <A /><B />

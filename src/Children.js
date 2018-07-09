@@ -1,11 +1,37 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 
-/**
- * This React Component will be transformed to stateless functional component on the both node environments 'development' and 'production'
- * by [babel-plugin-transform-react-pure-components]{@link https://www.npmjs.com/package/babel-plugin-transform-react-pure-components}
- */
 class Children extends Component {
+  /**
+   * This React Component will be transformed to stateless functional component on the both node environments 'development' and 'production'
+   * by [babel-plugin-transform-react-pure-components]{@link https://www.npmjs.com/package/babel-plugin-transform-react-pure-components}
+   */
+  /**
+   * PropTypes will be removed on 'production' node environment
+   * by [babel-plugin-transform-react-remove-prop-types]{@link https://www.npmjs.com/package/babel-plugin-transform-react-remove-prop-types}
+   */
+  static propTypes = {
+    items: PropTypes.oneOfType([
+      PropTypes.array,
+      PropTypes.object,
+    ]),
+    active: PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.string,
+      PropTypes.arrayOf(PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.string,
+      ])),
+    ]),
+    children: PropTypes.array,
+  }
+
+  static defaultProps = {
+    items: null,
+    active: null,
+    children: null,
+  }
+
   render() {
     const getActiveItems = (items, active) => {
       const activeItems = [];
@@ -33,38 +59,13 @@ class Children extends Component {
       return activeItems;
     };
 
+    const { items, children, active } = this.props;
+
     return getActiveItems(
-      this.props.items || this.props.children,
-      this.props.active,
+      items || children,
+      active,
     );
   }
 }
-
-/**
- * PropTypes will be removed on 'production' node environment
- * by [babel-plugin-transform-react-remove-prop-types]{@link https://www.npmjs.com/package/babel-plugin-transform-react-remove-prop-types}
- */
-
-Children.defaultProps = {
-  items: null,
-  active: null,
-  children: null,
-};
-
-Children.propTypes = {
-  items: PropTypes.oneOfType([
-    PropTypes.array,
-    PropTypes.object,
-  ]),
-  active: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.string,
-    PropTypes.arrayOf(PropTypes.oneOfType([
-      PropTypes.number,
-      PropTypes.string,
-    ])),
-  ]),
-  children: PropTypes.array,
-};
 
 export default Children;
