@@ -14,7 +14,7 @@ class Children extends Component {
         return null;
       }
 
-      if ((typeof active === 'undefined') || active === null) {
+      if (active === null) {
         return Array.isArray(items) ? items : Object.keys(items).map(key => items[key]);
       }
 
@@ -44,6 +44,13 @@ class Children extends Component {
  * PropTypes will be removed on 'production' node environment
  * by [babel-plugin-transform-react-remove-prop-types]{@link https://www.npmjs.com/package/babel-plugin-transform-react-remove-prop-types}
  */
+
+Children.defaultProps = {
+  items: null,
+  active: null,
+  children: null,
+};
+
 Children.propTypes = {
   items: PropTypes.oneOfType([
     PropTypes.array,

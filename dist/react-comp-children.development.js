@@ -24,7 +24,7 @@ function Children(props) {
       return null;
     }
 
-    if (typeof active === 'undefined' || active === null) {
+    if (active === null) {
       return Array.isArray(items) ? items : Object.keys(items).map(function (key) {
         return items[key];
       });
@@ -53,6 +53,11 @@ function Children(props) {
  * by [babel-plugin-transform-react-remove-prop-types]{@link https://www.npmjs.com/package/babel-plugin-transform-react-remove-prop-types}
  */
 
+Children.defaultProps = {
+  items: null,
+  active: null,
+  children: null
+};
 
 Children.propTypes = {
   items: _propTypes2.default.oneOfType([_propTypes2.default.array, _propTypes2.default.object]),
